@@ -66,8 +66,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Have a project in mind or just want to chat? I'd love to hear from
-            you. Let's create something amazing together!
+            Have a project in mind or just want to chat? I&apos;d love to hear
+            from you. Let&apos;s create something amazing together!
           </motion.p>
         </div>
 

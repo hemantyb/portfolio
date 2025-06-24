@@ -132,10 +132,10 @@ export default function AboutPage() {
             <Heart className="h-12 w-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">What I Love</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open source projects, or sharing knowledge through
-              blog posts. I believe in continuous learning and the power of
-              community in driving innovation.
+              When I&apos;m not coding, you&apos;ll find me exploring new
+              technologies, contributing to open source projects, or sharing
+              knowledge through blog posts. I believe in continuous learning and
+              the power of community in driving innovation.
             </p>
           </Card>
         </motion.section>
