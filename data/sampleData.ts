@@ -3,6 +3,22 @@ import { BlogPost, Project } from "@/types";
 export const projects: Project[] = [
   {
     id: 1,
+    title: "AI-Powered Microservice Fitness Application",
+    description:
+      "Developed a full-stack AI fitness application. It uses a microservices architecture to build REST APIs, store data, integrate AI for personalized recommendations, handle messaging, manage service discovery, and secure endpoints, all with a React frontend.",
+    tags: [
+      "Spring Boot",
+      "Spring Data JPA",
+      "Hibernate",
+      "PostgreSQL",
+      "MongoDB",
+      "RabbitMQ",
+      "AI",
+    ],
+    image: "",
+  },
+  {
+    id: 2,
     title: "Patient Management System",
     description:
       "Created a Patient Management System to efficiently manage patient records. The system ensures data integrity and facilitates robust storage and communication of patient information.",
@@ -10,19 +26,11 @@ export const projects: Project[] = [
     image: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Rate Limitter",
     description:
       "Developed an API rate limiter to protect backend services from excessive requests. It ensures fair resource allocation, prevents abuse, and maintains API stability by controlling traffic flow.",
     tags: ["Go", "Middleware"],
-    image: "",
-  },
-  {
-    id: 3,
-    title: "Archive-rs",
-    description:
-      "Developed a utility to efficiently compress and decompress files. It currently handles gzip archives, with future plans to expand support for other common compression formats like tar and zip.",
-    tags: ["Rust"],
     image: "",
   },
 ];
