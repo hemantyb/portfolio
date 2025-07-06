@@ -22,12 +22,12 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 				<ArrowRight className="mr-2 h-4 w-4 transform rotate-180" /> Back to
 				portfolio
 			</Button>
-			<motion.div
-				className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-64 mb-6"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 0.2 }}
-			></motion.div>
+			{/* <motion.div */}
+			{/* 	className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-64 mb-6" */}
+			{/* 	initial={{ opacity: 0 }} */}
+			{/* 	animate={{ opacity: 1 }} */}
+			{/* 	transition={{ delay: 0.2 }} */}
+			{/* ></motion.div> */}
 			<h1 className="text-3xl font-bold mb-2">{project.title}</h1>
 			<p className="text-lg mb-4">{project.description}</p>
 			<div className="flex flex-wrap gap-2 mb-6">

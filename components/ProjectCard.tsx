@@ -32,10 +32,10 @@ export default function ProjectCard({
 				className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full"
 				onClick={() => onClick(project)}
 			>
-				<motion.div
-					className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-48"
-					whileHover={{ scale: 1.02 }}
-				></motion.div>
+				{/* <motion.div */}
+				{/* 	className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-48" */}
+				{/* 	whileHover={{ scale: 1.02 }} */}
+				{/* ></motion.div> */}
 				<CardHeader>
 					<CardTitle>{project.title}</CardTitle>
 				</CardHeader>
