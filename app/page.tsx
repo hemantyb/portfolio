@@ -9,48 +9,48 @@ import BlogSection from "@/components/BlogSection";
 import ProjectDetail from "@/components/ProjectDetail";
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+	const [searchQuery, setSearchQuery] = useState("");
+	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = useMemo(() => {
-    return projects.filter(
-      (project) =>
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.tags.some((tag) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase()),
-        ),
-    );
-  }, [searchQuery]);
+	const filteredProjects = useMemo(() => {
+		return projects.filter(
+			(project) =>
+				project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				project.tags.some((tag) =>
+					tag.toLowerCase().includes(searchQuery.toLowerCase()),
+				),
+		);
+	}, [searchQuery]);
 
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-  };
+	const handleProjectClick = (project: Project) => {
+		setSelectedProject(project);
+	};
 
-  const handleBackToPortfolio = () => {
-    setSelectedProject(null);
-  };
+	const handleBackToPortfolio = () => {
+		setSelectedProject(null);
+	};
 
-  return (
-    <Layout
-      showSearch={true}
-      searchQuery={searchQuery}
-      setSearchQuery={setSearchQuery}
-    >
-      {selectedProject ? (
-        <ProjectDetail
-          project={selectedProject}
-          onBack={handleBackToPortfolio}
-        />
-      ) : (
-        <>
-          <BlogSection posts={blogPosts} showAll={false} linkToDetail={true} />
-          <PortfolioSection
-            projects={filteredProjects}
-            onProjectClick={handleProjectClick}
-          />
-        </>
-      )}
-    </Layout>
-  );
+	return (
+		<Layout
+			showSearch={true}
+			searchQuery={searchQuery}
+			setSearchQuery={setSearchQuery}
+		>
+			{selectedProject ? (
+				<ProjectDetail
+					project={selectedProject}
+					onBack={handleBackToPortfolio}
+				/>
+			) : (
+				<>
+					<BlogSection posts={blogPosts} showAll={false} linkToDetail={true} />
+					<PortfolioSection
+						projects={filteredProjects}
+						onProjectClick={handleProjectClick}
+					/>
+				</>
+			)}
+		</Layout>
+	);
 }

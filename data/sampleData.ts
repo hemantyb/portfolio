@@ -39,6 +39,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Getting Started with React Hooks",
+    slug: "getting-started-with-react-hooks",
     excerpt:
       "Learn how to use React Hooks to simplify your functional components",
     content:

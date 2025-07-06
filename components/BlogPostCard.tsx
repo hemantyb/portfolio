@@ -44,7 +44,7 @@ export default function BlogPostCard({
       whileHover={{ y: -2 }}
     >
       {linkToDetail ? (
-        <Link href={`/blog/${post.id}`}>{cardContent}</Link>
+        <Link href={`/blog/${post.slug}`}>{cardContent}</Link>
       ) : (
         cardContent
       )}

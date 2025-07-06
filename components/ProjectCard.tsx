@@ -1,59 +1,59 @@
 "use client";
 
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+	Card,
+	CardContent,
+	CardFooter,
+	CardHeader,
+	CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Project } from "@/types";
 
 interface ProjectCardProps {
-  project: Project;
-  index: number;
-  onClick: (project: Project) => void;
+	project: Project;
+	index: number;
+	onClick: (project: Project) => void;
 }
 
 export default function ProjectCard({
-  project,
-  index,
-  onClick,
+	project,
+	index,
+	onClick,
 }: ProjectCardProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-      whileHover={{ y: -5 }}
-    >
-      <Card
-        className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full"
-        onClick={() => onClick(project)}
-      >
-        <motion.div
-          className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-48"
-          whileHover={{ scale: 1.02 }}
-        ></motion.div>
-        <CardHeader>
-          <CardTitle>{project.title}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">{project.description}</p>
-        </CardContent>
-        <CardFooter className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <motion.span
-              key={tag}
-              className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs"
-              whileHover={{ scale: 1.1 }}
-            >
-              {tag}
-            </motion.span>
-          ))}
-        </CardFooter>
-      </Card>
-    </motion.div>
-  );
+	return (
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ delay: index * 0.1 }}
+			whileHover={{ y: -5 }}
+		>
+			<Card
+				className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full"
+				onClick={() => onClick(project)}
+			>
+				<motion.div
+					className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-48"
+					whileHover={{ scale: 1.02 }}
+				></motion.div>
+				<CardHeader>
+					<CardTitle>{project.title}</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<p className="text-muted-foreground">{project.description}</p>
+				</CardContent>
+				<CardFooter className="flex flex-wrap gap-2">
+					{project.tags.map((tag) => (
+						<motion.span
+							key={tag}
+							className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs"
+							whileHover={{ scale: 1.1 }}
+						>
+							{tag}
+						</motion.span>
+					))}
+				</CardFooter>
+			</Card>
+		</motion.div>
+	);
 }
