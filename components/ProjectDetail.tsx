@@ -28,18 +28,54 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 			{/* 	animate={{ opacity: 1 }} */}
 			{/* 	transition={{ delay: 0.2 }} */}
 			{/* ></motion.div> */}
-			<h1 className="text-3xl font-bold mb-2">{project.title}</h1>
-			<p className="text-lg mb-4">{project.description}</p>
-			<div className="flex flex-wrap gap-2 mb-6">
-				{project.tags.map((tag) => (
-					<motion.span
-						key={tag}
-						className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
-						whileHover={{ scale: 1.05 }}
-					>
-						{tag}
-					</motion.span>
-				))}
+			<h1 className="text-3xl font-bold mb-4">{project.title}</h1>
+			<p className="text-lg mb-6">{project.longDescription}</p>
+
+			{project.technologiesUsed && project.technologiesUsed.length > 0 && (
+				<div className="mb-6">
+					<h2 className="text-2xl font-semibold mb-3">Technologies Used</h2>
+					<div className="flex flex-wrap gap-2">
+						{project.technologiesUsed.map((tech) => (
+							<motion.span
+								key={tech}
+								className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
+								whileHover={{ scale: 1.05 }}
+							>
+								{tech}
+							</motion.span>
+						))}
+					</div>
+				</div>
+			)}
+
+			{project.features && project.features.length > 0 && (
+				<div className="mb-6">
+					<h2 className="text-2xl font-semibold mb-3">Key Features</h2>
+					<ul className="list-disc list-inside space-y-2">
+						{project.features.map((feature, index) => (
+							<li key={index} className="text-base">
+								{feature}
+							</li>
+						))}
+					</ul>
+				</div>
+			)}
+
+			<div className="flex flex-wrap gap-3 mb-6">
+				{project.githubUrl && (
+					<Button asChild>
+						<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+							View on GitHub
+						</a>
+					</Button>
+				)}
+				{project.liveDemoUrl && (
+					<Button asChild variant="outline">
+						<a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+							Live Demo
+						</a>
+					</Button>
+				)}
 			</div>
 		</motion.div>
 	);

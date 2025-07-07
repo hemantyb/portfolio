@@ -41,8 +41,9 @@ export default function ProjectCard({
 					<CardTitle>{project.title}</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<p className="text-muted-foreground">{project.description}</p>
+					<p className="text-muted-foreground">{project.shortDescription}</p>
 				</CardContent>
+				
 				<CardFooter className="flex flex-wrap gap-2 justify-between items-center">
 					<div className="flex flex-wrap gap-2">
 						{project.tags.map((tag) => (

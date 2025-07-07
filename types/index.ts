@@ -1,10 +1,14 @@
 export type Project = {
   id: number;
   title: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string;
+  technologiesUsed: string[];
+  features: string[];
   tags: string[];
   image: string;
   githubUrl?: string;
+  liveDemoUrl?: string;
 };
 
 export type BlogPost = {

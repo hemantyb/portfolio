@@ -16,7 +16,7 @@ export default function Home() {
 		return projects.filter(
 			(project) =>
 				project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				project.tags.some((tag) =>
 					tag.toLowerCase().includes(searchQuery.toLowerCase()),
 				),
