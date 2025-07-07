@@ -16,6 +16,7 @@ export const projects: Project[] = [
       "AI",
     ],
     image: "",
+    githubUrl: "https://github.com/hemantyb/fitness-microservices",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       "Created a Patient Management System to efficiently manage patient records. The system ensures data integrity and facilitates robust storage and communication of patient information.",
     tags: ["Java", "Spring Boot", "gRPC", "Postgres"],
     image: "",
+    githubUrl: "https://github.com/hemantyb/patient-management-system",
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const projects: Project[] = [
       "Developed an API rate limiter to protect backend services from excessive requests. It ensures fair resource allocation, prevents abuse, and maintains API stability by controlling traffic flow.",
     tags: ["Go", "Middleware"],
     image: "",
+    githubUrl: "https://github.com/hemantyb/ratelimiter-go",
   },
 ];
 

@@ -7,6 +7,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Project } from "@/types";
 
@@ -42,16 +43,25 @@ export default function ProjectCard({
 				<CardContent>
 					<p className="text-muted-foreground">{project.description}</p>
 				</CardContent>
-				<CardFooter className="flex flex-wrap gap-2">
-					{project.tags.map((tag) => (
-						<motion.span
-							key={tag}
-							className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs"
-							whileHover={{ scale: 1.1 }}
-						>
-							{tag}
-						</motion.span>
-					))}
+				<CardFooter className="flex flex-wrap gap-2 justify-between items-center">
+					<div className="flex flex-wrap gap-2">
+						{project.tags.map((tag) => (
+							<motion.span
+								key={tag}
+								className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs"
+								whileHover={{ scale: 1.1 }}
+							>
+								{tag}
+							</motion.span>
+						))}
+					</div>
+					{project.githubUrl && (
+						<Button asChild variant="outline" size="sm">
+							<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+								GitHub
+							</a>
+						</Button>
+					)}
 				</CardFooter>
 			</Card>
 		</motion.div>
