@@ -43,7 +43,7 @@ export default function ProjectCard({
 				<CardContent>
 					<p className="text-muted-foreground">{project.shortDescription}</p>
 				</CardContent>
-				
+
 				<CardFooter className="flex flex-wrap gap-2 justify-between items-center">
 					<div className="flex flex-wrap gap-2">
 						{project.tags.map((tag) => (
@@ -56,13 +56,13 @@ export default function ProjectCard({
 							</motion.span>
 						))}
 					</div>
-					{project.githubUrl && (
-						<Button asChild variant="outline" size="sm">
-							<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-								GitHub
-							</a>
-						</Button>
-					)}
+					{/* {project.githubUrl && ( */}
+					{/* 	<Button asChild variant="outline" size="sm"> */}
+					{/* 		<a href={project.githubUrl} target="_blank" rel="noopener noreferrer"> */}
+					{/* 			GitHub */}
+					{/* 		</a> */}
+					{/* 	</Button> */}
+					{/* )} */}
 				</CardFooter>
 			</Card>
 		</motion.div>
