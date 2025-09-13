@@ -1,29 +1,14 @@
-// app/about/page.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Code, Database, Globe, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import Link from "next/link";
 
 export default function AboutPage() {
-	const skills = [
-		{ name: "Vim", level: 100, icon: Code },
-		{ name: "Java", level: 90, icon: Code },
-		{ name: "Spring Boot", level: 88, icon: Code },
-		{ name: "JPA/Hibernate", level: 70, icon: Code },
-		{ name: "Microservices", level: 60, icon: Code },
-		{ name: "TypeScript", level: 70, icon: Code },
-		{ name: "React", level: 95, icon: Code },
-		{ name: "Next.js", level: 60, icon: Globe },
-		{ name: "PostgreSQL", level: 80, icon: Database },
-		{ name: "Python", level: 90, icon: Code },
-		{ name: "MySQL", level: 80, icon: Database },
-		{ name: "Linux", level: 100, icon: Database },
-	];
-
 	return (
 		<Layout>
 			<motion.div
@@ -83,45 +68,7 @@ export default function AboutPage() {
 				</div>
 
 				{/* Skills Section */}
-				<motion.section
-					className="mb-16"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.6 }}
-				>
-					<h2 className="text-3xl font-bold mb-8 text-center">
-						Skills & Technologies
-					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{skills.map((skill, index) => (
-							<motion.div
-								key={skill.name}
-								className="flex items-center space-x-4 p-4 rounded-lg bg-card"
-								initial={{ opacity: 0, x: -20 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{ delay: 0.7 + index * 0.1 }}
-							>
-								<skill.icon className="h-8 w-8 text-primary" />
-								<div className="flex-1">
-									<div className="flex justify-between items-center mb-2">
-										<span className="font-medium">{skill.name}</span>
-										<span className="text-sm text-muted-foreground">
-											{skill.level}%
-										</span>
-									</div>
-									<div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-										<motion.div
-											className="bg-primary h-2 rounded-full"
-											initial={{ width: 0 }}
-											animate={{ width: `${skill.level}%` }}
-											transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
-										/>
-									</div>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</motion.section>
+				<Skills />
 
 				{/* Personal Touch */}
 				<motion.section
