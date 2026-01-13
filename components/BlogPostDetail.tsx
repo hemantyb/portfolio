@@ -32,7 +32,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
 				<div className="space-y-4">
 					{post.content.split(". ").map((sentence, i) => (
 						<motion.p
-							key={i}
+							key={`${post.id}-sentence-${i}`}
 							initial={{ opacity: 0, y: 10 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: i * 0.05 }}

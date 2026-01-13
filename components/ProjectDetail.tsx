@@ -47,7 +47,7 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 					<h2 className="text-2xl font-semibold mb-3">Key Features</h2>
 					<ul className="list-disc list-inside space-y-2">
 						{project.features.map((feature, index) => (
-							<li key={index} className="text-base">
+							<li key={`${project.id}-feature-${index}`} className="text-base">
 								{feature}
 							</li>
 						))}
