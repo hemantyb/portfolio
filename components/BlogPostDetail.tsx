@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { BlogPost } from "@/types";
+import type { BlogPost } from "@/types";
 import Link from "next/link";
 
 interface BlogPostDetailProps {

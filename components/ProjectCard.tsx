@@ -8,7 +8,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Project } from "@/types";
+import type { Project } from "@/types";
 
 interface ProjectCardProps {
 	project: Project;

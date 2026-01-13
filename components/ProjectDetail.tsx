@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Project } from "@/types";
+import type { Project } from "@/types";
 
 interface ProjectDetailProps {
 	project: Project;
@@ -22,12 +22,6 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 				<ArrowRight className="mr-2 h-4 w-4 transform rotate-180" /> Back to
 				portfolio
 			</Button>
-			{/* <motion.div */}
-			{/* 	className="bg-gray-200 dark:bg-gray-700 border-2 border-rounded rounded-xl w-full h-64 mb-6" */}
-			{/* 	initial={{ opacity: 0 }} */}
-			{/* 	animate={{ opacity: 1 }} */}
-			{/* 	transition={{ delay: 0.2 }} */}
-			{/* ></motion.div> */}
 			<h1 className="text-3xl font-bold mb-4">{project.title}</h1>
 			<p className="text-lg mb-6">{project.longDescription}</p>
 
@@ -64,14 +58,22 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 			<div className="flex flex-wrap gap-3 mb-6">
 				{project.githubUrl && (
 					<Button asChild>
-						<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+						<a
+							href={project.githubUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							View on GitHub
 						</a>
 					</Button>
 				)}
 				{project.liveDemoUrl && (
 					<Button asChild variant="outline">
-						<a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+						<a
+							href={project.liveDemoUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							Live Demo
 						</a>
 					</Button>

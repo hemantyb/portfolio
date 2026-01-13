@@ -10,7 +10,7 @@ import {
 	Terminal,
 	Server,
 	FileCode,
-	Monitor
+	Monitor,
 } from "lucide-react";
 
 export default function Skills() {

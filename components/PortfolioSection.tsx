@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Project } from "@/types";
+import type { Project } from "@/types";
 import ProjectCard from "./ProjectCard";
 
 interface PortfolioSectionProps {
