@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/data/sampleData";
-import Layout from "@/components/Layout";
 import BlogPostDetail from "@/components/BlogPostDetail";
+import Layout from "@/components/Layout";
+import { blogPosts } from "@/data/sampleData";
 
 interface BlogPostPageProps {
 	params: Promise<{ slug: string }>;

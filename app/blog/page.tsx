@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { blogPosts } from "@/data/sampleData";
-import Layout from "@/components/Layout";
 import BlogSection from "@/components/BlogSection";
+import Layout from "@/components/Layout";
+import { blogPosts } from "@/data/sampleData";
 
 export default function BlogPage() {
 	const [searchQuery, setSearchQuery] = useState("");

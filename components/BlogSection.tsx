@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { BlogPost } from "@/types";
-import BlogPostCard from "./BlogPostCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import type { BlogPost } from "@/types";
+import BlogPostCard from "./BlogPostCard";
 
 interface BlogSectionProps {
 	posts: BlogPost[];

@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { blogPosts, projects } from "@/data/sampleData";
-import { Project } from "@/types";
+import BlogSection from "@/components/BlogSection";
 import Layout from "@/components/Layout";
 import PortfolioSection from "@/components/PortfolioSection";
-import BlogSection from "@/components/BlogSection";
 import ProjectDetail from "@/components/ProjectDetail";
+import { blogPosts, projects } from "@/data/sampleData";
+import type { Project } from "@/types";
 
 export default function Home() {
 	const [searchQuery, setSearchQuery] = useState("");
@@ -16,7 +16,9 @@ export default function Home() {
 		return projects.filter(
 			(project) =>
 				project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				project.shortDescription
+					.toLowerCase()
+					.includes(searchQuery.toLowerCase()) ||
 				project.tags.some((tag) =>
 					tag.toLowerCase().includes(searchQuery.toLowerCase()),
 				),

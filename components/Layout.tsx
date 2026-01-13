@@ -1,9 +1,9 @@
 "use client";
 
-import { useDarkMode } from "@/hooks/useDarkMode";
-import Footer from "./Footer";
 import type React from "react";
+import { useDarkMode } from "@/hooks/useDarkMode";
 import FloatingHeader from "./FloatingHeader";
+import Footer from "./Footer";
 
 interface LayoutProps {
 	children: React.ReactNode;

@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Link from "next/link";
 import {
 	Card,
 	CardContent,
@@ -7,9 +9,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { motion } from "framer-motion";
 import type { BlogPost } from "@/types";
-import Link from "next/link";
 
 interface BlogPostCardProps {
 	post: BlogPost;

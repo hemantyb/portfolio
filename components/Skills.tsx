@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import {
 	Code2,
 	Coffee,
-	Layers,
 	Database,
-	Globe,
-	Terminal,
-	Server,
 	FileCode,
+	Globe,
+	Layers,
 	Monitor,
+	Server,
+	Terminal,
 } from "lucide-react";
 
 export default function Skills() {

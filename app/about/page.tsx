@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Heart } from "lucide-react";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export default function AboutPage() {
 	return (

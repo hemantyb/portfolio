@@ -1,10 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import type { BlogPost } from "@/types";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import type { BlogPost } from "@/types";
 
 interface BlogPostDetailProps {
 	post: BlogPost;

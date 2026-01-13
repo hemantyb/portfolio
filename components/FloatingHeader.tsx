@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, Moon, Sun, X, Home, User, Briefcase, Mail } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Briefcase, Home, Mail, Menu, Moon, Sun, User, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 interface HeaderProps {
 	darkMode: boolean;
