@@ -1,34 +1,8 @@
-"use client";
-
-import { useMemo, useState } from "react";
-import BlogSection from "@/components/BlogSection";
-import Layout from "@/components/Layout";
-import { blogPosts } from "@/data/sampleData";
+import BlogClient from "@/components/BlogClient";
+import { getAllPostsMetadata } from "@/lib/posts";
 
 export default function BlogPage() {
-	const [searchQuery, setSearchQuery] = useState("");
+  const posts = getAllPostsMetadata();
 
-	const filteredPosts = useMemo(() => {
-		return blogPosts.filter(
-			(post) =>
-				post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				post.content.toLowerCase().includes(searchQuery.toLowerCase()),
-		);
-	}, [searchQuery]);
-
-	return (
-		<Layout
-			showSearch={true}
-			searchQuery={searchQuery}
-			setSearchQuery={setSearchQuery}
-		>
-			<BlogSection
-				posts={filteredPosts}
-				title="All Blog Posts"
-				showAll={true}
-				linkToDetail={true}
-			/>
-		</Layout>
-	);
+  return <BlogClient posts={posts} />;
 }

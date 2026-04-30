@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import type { BlogPost } from "@/types";
+import type { PostMetadata } from "@/lib/posts";
 import BlogPostCard from "./BlogPostCard";
 
 interface BlogSectionProps {
-	posts: BlogPost[];
+	posts: PostMetadata[];
 	title?: string;
 	showAll?: boolean;
 	linkToDetail?: boolean;
@@ -55,7 +55,7 @@ export default function BlogSection({
 				>
 					{displayPosts.map((post, index) => (
 						<BlogPostCard
-							key={post.id}
+							key={post.slug}
 							post={post}
 							index={index}
 							linkToDetail={linkToDetail}

@@ -9,10 +9,10 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import type { BlogPost } from "@/types";
+import type { PostMetadata } from "@/lib/posts";
 
 interface BlogPostCardProps {
-	post: BlogPost;
+	post: PostMetadata;
 	index: number;
 	linkToDetail?: boolean;
 }

@@ -12,11 +12,10 @@ export type Project = {
 };
 
 export type BlogPost = {
-  id: number;
-  title: string;
   slug: string;
+  title: string;
   excerpt: string;
-  content: string;
   date: string;
   readTime: string;
+  content?: string;
 };

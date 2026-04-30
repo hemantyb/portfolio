@@ -1,0 +1,36 @@
+---
+title: "Getting Started with React Hooks"
+date: "2025-06-20"
+excerpt: "Learn how to use React Hooks to simplify your functional components"
+readTime: "2 min read"
+---
+
+React Hooks revolutionized how we write React components by allowing us to use state and lifecycle features in functional components.
+
+## useState Hook
+
+The `useState` hook lets you add state to functional components:
+
+```tsx
+const [count, setCount] = useState(0);
+```
+
+## useEffect Hook
+
+The `useEffect` hook replaces lifecycle methods like `componentDidMount` and `componentDidUpdate`:
+
+```tsx
+useEffect(() => {
+  document.title = `Count: ${count}`;
+}, [count]);
+```
+
+## Other Useful Hooks
+
+- **useContext**: Access React context without wrapping components
+- **useReducer**: Manage complex state logic
+- **useCallback/useMemo**: Performance optimization
+
+## Conclusion
+
+Hooks make functional components more powerful and expressive than ever before.

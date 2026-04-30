@@ -1,4 +1,4 @@
-import type { BlogPost, Project } from "@/types";
+import type { Project } from "@/types";
 
 export const projects: Project[] = [
 	{
@@ -80,19 +80,5 @@ export const projects: Project[] = [
 		tags: ["Go", "Middleware", "Rate Limiting", "API Security"],
 		image: "",
 		githubUrl: "https://github.com/hemantyb/ratelimiter-go",
-	},
-];
-
-export const blogPosts: BlogPost[] = [
-	{
-		id: 1,
-		title: "Getting Started with React Hooks",
-		slug: "getting-started-with-react-hooks",
-		excerpt:
-			"Learn how to use React Hooks to simplify your functional components",
-		content:
-			"React Hooks revolutionized how we write React components by allowing us to use state and lifecycle features in functional components. The useState hook lets you add state to functional components, while useEffect replaces lifecycle methods like componentDidMount and componentDidUpdate. Other useful hooks include useContext for accessing context, useReducer for more complex state logic, and useCallback/useMemo for performance optimization.",
-		date: "2025-06-20",
-		readTime: "2 min read",
 	},
 ];
