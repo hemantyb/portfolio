@@ -1,5 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { ArrowRight } from "lucide-react";
+import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +21,7 @@ export default async function BlogPostDetail({ post }: BlogPostDetailProps) {
     <div className="max-w-3xl mx-auto">
       <Link href="/blog">
         <Button variant="outline" className="mb-6">
-          <ArrowRight className="mr-2 h-4 w-4 transform rotate-180" /> Back to
+          <FiArrowRight className="mr-2 h-4 w-4 transform rotate-180" /> Back to
           blog
         </Button>
       </Link>
