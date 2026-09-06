@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/types";
@@ -12,12 +11,7 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
   return (
-    <motion.div
-      className="max-w-3xl mx-auto"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="max-w-3xl mx-auto">
       <Button variant="outline" onClick={onBack} className="mb-6">
         <FiArrowRight className="mr-2 h-4 w-4 transform rotate-180" /> Back to
         portfolio
@@ -30,13 +24,12 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
           <h2 className="text-2xl font-semibold mb-3">Technologies Used</h2>
           <div className="flex flex-wrap gap-2">
             {project.technologiesUsed.map((tech) => (
-              <motion.span
+              <span
                 key={tech}
                 className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
-                whileHover={{ scale: 1.05 }}
               >
                 {tech}
-              </motion.span>
+              </span>
             ))}
           </div>
         </div>
@@ -79,6 +72,6 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
           </Button>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }

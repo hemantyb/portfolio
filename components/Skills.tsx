@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   FiTerminal,
   FiCode,
@@ -28,29 +27,21 @@ export default function Skills() {
   ];
 
   return (
-    <motion.section
-      className="mb-16"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6 }}
-    >
+    <section className="mb-16">
       <h2 className="text-3xl font-bold mb-8 text-center">
         Skills & Technologies
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {skills.map((skill, index) => (
-          <motion.div
+          <div
             key={skill.name}
             className="flex flex-col items-center space-y-3 p-6 rounded-lg bg-card hover:bg-accent transition-colors"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7 + index * 0.1 }}
           >
             <skill.icon className="h-8 w-8 text-primary" />
             <span className="font-medium text-center">{skill.name}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -1,53 +1,47 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-	Card,
-	CardContent,
-	CardFooter,
-	CardHeader,
-	CardTitle,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import type { PostMetadata } from "@/lib/posts";
 
 interface BlogPostCardProps {
-	post: PostMetadata;
-	index: number;
-	linkToDetail?: boolean;
+  post: PostMetadata;
+  index: number;
+  linkToDetail?: boolean;
 }
 
 export default function BlogPostCard({
-	post,
-	index,
-	linkToDetail = false,
+  post,
+  index,
+  linkToDetail = false,
 }: BlogPostCardProps) {
-	const cardContent = (
-		<Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
-			<CardHeader>
-				<CardTitle>{post.title}</CardTitle>
-			</CardHeader>
-			<CardContent>
-				<p className="text-muted-foreground">{post.excerpt}</p>
-			</CardContent>
-			<CardFooter className="text-sm text-muted-foreground">
-				{post.date} · {post.readTime}
-			</CardFooter>
-		</Card>
-	);
+  const cardContent = (
+    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+      <CardHeader>
+        <CardTitle>{post.title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">{post.excerpt}</p>
+      </CardContent>
+      <CardFooter className="text-sm text-muted-foreground">
+        {post.date} · {post.readTime}
+      </CardFooter>
+    </Card>
+  );
 
-	return (
-		<motion.div
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ delay: index * 0.1 + 0.2 }}
-			whileHover={{ y: -2 }}
-		>
-			{linkToDetail ? (
-				<Link href={`/blog/${post.slug}`}>{cardContent}</Link>
-			) : (
-				cardContent
-			)}
-		</motion.div>
-	);
+  return (
+    <div>
+      {linkToDetail ? (
+        <Link href={`/blog/${post.slug}`}>{cardContent}</Link>
+      ) : (
+        cardContent
+      )}
+    </div>
+  );
 }
